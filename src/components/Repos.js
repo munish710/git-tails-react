@@ -1,9 +1,16 @@
 import React from "react";
+import { useContext } from "react";
 import styled from "styled-components";
 import { GithubContext } from "../context/context";
-import { ExampleChart, Pie3D, Column3D, Bar3D, Doughnut2D } from "./Charts";
+import { ExampleChart, Pie, Column3D, Bar3D, Doughnut2D } from "./Charts";
 const Repos = () => {
-  return <h2>repos component</h2>;
+  const { repos } = useContext(GithubContext);
+
+  return (
+    <section className="section">
+      <Wrapper className="section-center"></Wrapper>
+    </section>
+  );
 };
 
 const Wrapper = styled.div`
