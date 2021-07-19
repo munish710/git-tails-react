@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import styled from "styled-components";
 import { GithubContext } from "../context/context";
-import { ExampleChart, Pie, Column3D, Bar3D, Doughnut2D } from "./Charts";
+import { Pie, Column3D, Bar3D, Doughnut } from "./Charts";
 const Repos = () => {
   const { repos } = useContext(GithubContext);
   let languages = repos.reduce((total, item) => {
