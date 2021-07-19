@@ -25,7 +25,9 @@ const Repos = () => {
     .slice(0, 5);
   return (
     <section className="section">
-      <Wrapper className="section-center"></Wrapper>
+      <Wrapper className="section-center">
+        <Pie data={languages} />
+      </Wrapper>
     </section>
   );
 };
