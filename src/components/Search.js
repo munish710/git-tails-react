@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
 import { GithubContext } from "../context/context";
 const Search = () => {
   const [user, setUser] = useState("");
+  const { requests } = useContext(GithubContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (user) {
-      setUser("");
     }
   };
 
@@ -23,10 +23,11 @@ const Search = () => {
               value={user}
               onChange={(e) => setUser(e.target.value)}
             />
-            <button type="submit">search</button>
+
+            {requests > 0 && <button type="submit">search</button>}
           </div>
         </form>
-        <h3>Request: 60/60</h3>
+        <h3>Request: {requests}/60</h3>
       </Wrapper>
     </section>
   );
@@ -53,13 +54,13 @@ const Wrapper = styled.div`
     padding: 0.5rem;
     input {
       border-color: transparent;
-      outline-color: var(--clr-grey-10);
+      outline-color: var(--clr-white);
       letter-spacing: var(--spacing);
       color: var(--clr-grey-3);
       padding: 0.25rem 0.5rem;
     }
     input::placeholder {
-      color: var(--clr-grey-3);
+      color: var(--clr-grey-5);
       text-transform: capitalize;
       letter-spacing: var(--spacing);
     }
