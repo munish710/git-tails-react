@@ -1,6 +1,6 @@
-import Column3D from "./Column3D";
-import Bar3D from "./Bar3D";
+import Column from "./Column3D";
+import Bar from "./Bar3D";
 import Pie from "./Pie";
 import Doughnut from "./Doughnut";
 
-export { Pie, Column3D, Bar3D, Doughnut };
+export { Pie, Column, Bar, Doughnut };
