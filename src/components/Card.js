@@ -22,7 +22,7 @@ const Card = () => {
           <h4>{name}</h4>
           <p>@{twitter_username || "john doe"}</p>
         </div>
-        <a href={html_url} target="__blank">
+        <a href={html_url} target="__blank" rel="noopener noreferrer">
           follow
         </a>
       </header>
@@ -34,7 +34,7 @@ const Card = () => {
         <p>
           <MdLocationOn /> {location || "Earth"}
         </p>
-        <a href={`https://${blog}`} target="_blank">
+        <a href={`https://${blog}`} target="_blank" rel="noopener noreferrer">
           <MdLink />
           {blog}
         </a>
