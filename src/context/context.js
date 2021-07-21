@@ -25,10 +25,10 @@ const GithubProvider = ({ children }) => {
     if (response) {
       setGithubUser(response.data);
       const { login, followers_url } = response.data;
-      await Promise.allSettled(
+      await Promise.allSettled([
         axios.get(`${rootUrl}/users/${login}/repos?per_page=100`),
-        axios.get(`${followers_url}?per_page=100`)
-      )
+        axios.get(`${followers_url}?per_page=100`),
+      ])
         .then((results) => {
           const [repos, followers] = results;
           if (repos.status === "fulfilled") {
