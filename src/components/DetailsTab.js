@@ -1,13 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { GithubContext } from "../context/context";
 
 const DetailsTab = () => {
+  const { tabIndex, setTabIndex } = useContext(GithubContext);
   return (
     <Wrapper className="section-center">
       <div className="btn-container">
-        <button className="tab-btn active ">User Info</button>
-        <button className="tab-btn">Repositiory Stats</button>
-        <button className="tab-btn">Timeline</button>
+        <button
+          className={`${tabIndex === 0 ? "active" : ""} tab-btn`}
+          onClick={() => setTabIndex(0)}
+        >
+          User Info
+        </button>
+        <button
+          className={`${tabIndex === 1 ? "active" : ""} tab-btn`}
+          onClick={() => setTabIndex(1)}
+        >
+          Repository Stats
+        </button>
+        <button
+          className={`${tabIndex === 2 ? "active" : ""} tab-btn`}
+          onClick={() => setTabIndex(2)}
+        >
+          Timeline
+        </button>
       </div>
     </Wrapper>
   );
@@ -46,8 +63,8 @@ const Wrapper = styled.section`
     }
   }
   .tab-btn:hover {
-    color: var(--clr-primary-5);
-    border-bottom: 3px solid var(--clr-primary-5);
+    color: var(--clr-primary-7);
+    border-bottom: 3px solid var(--clr-primary-7);
   }
 
   .active {

@@ -3,7 +3,7 @@ import { Info, Repos, User, Search, Navbar, DetailsTab } from "../components";
 import Loader from "react-loader-spinner";
 import { GithubContext } from "../context/context";
 const Dashboard = () => {
-  const { isLoading } = useContext(GithubContext);
+  const { isLoading, tabIndex } = useContext(GithubContext);
   if (isLoading) {
     return (
       <main>
@@ -24,9 +24,13 @@ const Dashboard = () => {
       <Navbar />
       <Search />
       <DetailsTab />
-      <Info />
-      <User />
-      <Repos />
+
+      {tabIndex === 0 && (
+        <>
+          <Info /> <User />
+        </>
+      )}
+      {tabIndex === 1 && <Repos />}
     </main>
   );
 };

@@ -15,6 +15,7 @@ const GithubProvider = ({ children }) => {
   const [requests, setRequests] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState({ show: false, msg: "" });
+  const [tabIndex, setTabIndex] = useState(0);
 
   const searchGithubUser = async (user) => {
     toggleError();
@@ -74,6 +75,8 @@ const GithubProvider = ({ children }) => {
         error,
         searchGithubUser,
         isLoading,
+        tabIndex,
+        setTabIndex,
       }}
     >
       {children}
