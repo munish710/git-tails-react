@@ -44,7 +44,7 @@ const NavCenter = styled.div`
   .logo {
     display: flex;
     align-items: center;
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-4);
     h3 {
       font-weight: 400;
       margin-left: 0.25rem;

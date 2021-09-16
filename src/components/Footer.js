@@ -65,7 +65,7 @@ const Wrapper = styled.footer`
   }
 
   .footer-icon {
-    color: var(--clr-primary-3);
+    color: var(--clr-primary-4);
     font-size: 1.5rem;
     margin-right: 2rem;
   }
