@@ -26,7 +26,7 @@ const Navbar = () => {
 
 const Wrapper = styled.nav`
   padding: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   background: var(--clr-white);
   text-align: center;
   display: grid;

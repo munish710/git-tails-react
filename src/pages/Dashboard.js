@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Info, Repos, User, Search, Navbar } from "../components";
+import { Info, Repos, User, Search, Navbar, DetailsTab } from "../components";
 import Loader from "react-loader-spinner";
 import { GithubContext } from "../context/context";
 const Dashboard = () => {
@@ -23,6 +23,7 @@ const Dashboard = () => {
     <main>
       <Navbar />
       <Search />
+      <DetailsTab />
       <Info />
       <User />
       <Repos />
