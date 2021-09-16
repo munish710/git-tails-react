@@ -1,5 +1,13 @@
 import React, { useContext } from "react";
-import { Info, Repos, User, Search, Navbar, DetailsTab } from "../components";
+import {
+  Info,
+  Repos,
+  User,
+  Search,
+  Navbar,
+  DetailsTab,
+  Footer,
+} from "../components";
 import Loader from "react-loader-spinner";
 import { GithubContext } from "../context/context";
 const Dashboard = () => {
@@ -31,6 +39,7 @@ const Dashboard = () => {
         </>
       )}
       {tabIndex === 1 && <Repos />}
+      <Footer />
     </main>
   );
 };
