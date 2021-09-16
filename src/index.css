@@ -134,6 +134,9 @@ p {
   }
 }
 /*  global classes */
+nav {
+  background: var(--clr-white);
+}
 
 .btn {
   text-transform: uppercase;
