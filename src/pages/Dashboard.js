@@ -7,6 +7,7 @@ import {
   Navbar,
   DetailsTab,
   Footer,
+  ExtraInfo,
 } from "../components";
 import Loader from "react-loader-spinner";
 import { GithubContext } from "../context/context";
@@ -35,7 +36,9 @@ const Dashboard = () => {
 
       {tabIndex === 0 && (
         <>
-          <Info /> <User />
+          <Info />
+          <User />
+          <ExtraInfo />
         </>
       )}
       {tabIndex === 1 && <Repos />}
