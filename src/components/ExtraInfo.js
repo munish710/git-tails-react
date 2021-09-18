@@ -6,6 +6,7 @@ import {
   AiOutlineBranches,
   AiOutlineCode,
 } from "react-icons/ai";
+import { formatDate } from "../utils/formatDate";
 
 const ExtraInfo = () => {
   const { githubUser, repos } = useContext(GithubContext);
@@ -16,7 +17,6 @@ const ExtraInfo = () => {
   });
 
   const uniqueLanguages = [...new Set(languages)];
-  const date = new Date(created_at);
 
   return (
     <Wrapper className="section-center">
@@ -25,7 +25,7 @@ const ExtraInfo = () => {
           <AiOutlineCalendar />
         </span>
         <p>
-          User Joined Github on <strong>{date.toDateString()}</strong>{" "}
+          User Joined Github on <strong>{formatDate(created_at)}</strong>{" "}
         </p>
       </div>
       <div>
