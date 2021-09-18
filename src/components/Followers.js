@@ -73,6 +73,7 @@ const Wrapper = styled.article`
       object-fit: cover;
     }
     h4 {
+      text-transform: lowercase;
       margin-bottom: 0;
     }
     a {
