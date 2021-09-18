@@ -47,6 +47,7 @@ const TimelineContainer = () => {
 export default TimelineContainer;
 
 const Wrapper = styled.div`
+  min-height: 50vh;
   position: relative;
   margin: 4rem auto;
   width: 100%;
