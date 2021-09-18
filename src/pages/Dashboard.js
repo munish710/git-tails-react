@@ -8,6 +8,7 @@ import {
   DetailsTab,
   Footer,
   ExtraInfo,
+  TimelineContainer,
 } from "../components";
 import Loader from "react-loader-spinner";
 import { GithubContext } from "../context/context";
@@ -42,6 +43,7 @@ const Dashboard = () => {
         </>
       )}
       {tabIndex === 1 && <Repos />}
+      {tabIndex === 2 && <TimelineContainer />}
       <Footer />
     </main>
   );
