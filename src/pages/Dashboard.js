@@ -1,9 +1,19 @@
 import React, { useContext } from "react";
-import { Info, Repos, User, Search, Navbar } from "../components";
+import {
+  Info,
+  Repos,
+  User,
+  Search,
+  Navbar,
+  DetailsTab,
+  Footer,
+  ExtraInfo,
+  TimelineContainer,
+} from "../components";
 import Loader from "react-loader-spinner";
 import { GithubContext } from "../context/context";
 const Dashboard = () => {
-  const { isLoading } = useContext(GithubContext);
+  const { isLoading, tabIndex } = useContext(GithubContext);
   if (isLoading) {
     return (
       <main>
@@ -23,9 +33,18 @@ const Dashboard = () => {
     <main>
       <Navbar />
       <Search />
-      <Info />
-      <User />
-      <Repos />
+      <DetailsTab />
+
+      {tabIndex === 0 && (
+        <>
+          <Info />
+          <User />
+          <ExtraInfo />
+        </>
+      )}
+      {tabIndex === 1 && <Repos />}
+      {tabIndex === 2 && <TimelineContainer />}
+      <Footer />
     </main>
   );
 };

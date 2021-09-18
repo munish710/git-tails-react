@@ -113,7 +113,7 @@ const Wrapper = styled.div`
 `;
 const ErrorWrapper = styled.article`
   position: absolute;
-  width: 90vw;
+  width: 80vw;
   top: 0;
   left: 0;
   transform: translateY(-100%);
